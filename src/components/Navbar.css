@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #37003c; /* Premier League purple */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-links a,
+  .logout-button {
+    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover,
+  .navbar-links a:hover {
+    text-decoration: underline;
+  }
+  
