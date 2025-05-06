@@ -9,7 +9,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/profile/${user.id}`);
+        const res = await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/profile/${user.id}`);
         setProfile(res.data);
       } catch (err) {
         console.error('Error fetching profile', err);

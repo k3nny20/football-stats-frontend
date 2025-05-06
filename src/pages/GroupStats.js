@@ -11,7 +11,7 @@ const GroupStats = () => {
     setStats([]);
 
     try {
-      const res = await axios.get(`http://localhost:8080/api/stats/group/${groupId}`);
+      const res = await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/stats/group/${groupId}`);
       setStats(res.data);
     } catch (err) {
       console.error(err);

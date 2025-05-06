@@ -23,7 +23,7 @@ const MyStats = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/stats/user/${user.id}`);
+        const res = await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/stats/user/${user.id}`);
         setMyStats(res.data);
       } catch (err) {
         console.error(err);
@@ -46,7 +46,7 @@ const MyStats = () => {
     setError('');
 
     try {
-      await axios.post('http://localhost:8080/api/stats/submit', {
+      await axios.post('https://football-stats-backend-gyz8.onrender.com/api/stats/submit', {
         user_id: user.id,
         ...form
       });
@@ -64,7 +64,7 @@ const MyStats = () => {
       });
 
       // Refresh stat list
-      const res = await axios.get(`http://localhost:8080/api/stats/user/${user.id}`);
+      const res = await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/stats/user/${user.id}`);
       setMyStats(res.data);
     } catch (err) {
       console.error(err);

@@ -12,7 +12,7 @@ const MyGroups = () => {
   useEffect(() => {
     const fetchGroups = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/groups/user/${user.id}`);
+        const res = await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/groups/user/${user.id}`);
         setGroups(res.data);
       } catch (err) {
         console.error('Error fetching groups:', err);
@@ -24,7 +24,7 @@ const MyGroups = () => {
 
   const handleJoinGroup = async () => {
     try {
-      const res = await axios.post('http://localhost:8080/api/groups/join', {
+      const res = await axios.post('https://football-stats-backend-gyz8.onrender.com/api/groups/join', {
         user_id: user.id,
         group_id: parseInt(groupId)
       });
@@ -33,7 +33,7 @@ const MyGroups = () => {
       setGroupId('');
 
       // Refresh group list
-      const updated = await axios.get(`http://localhost:8080/api/groups/user/${user.id}`);
+      const updated = await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/groups/user/${user.id}`);
       setGroups(updated.data);
     } catch (err) {
       console.error(err);
@@ -52,7 +52,7 @@ const MyGroups = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:8080/api/groups/create', {
+      const res = await axios.post('https://football-stats-backend-gyz8.onrender.com/api/groups/create', {
         name: newGroup.name,
         description: newGroup.description,
         user_id: user.id
@@ -62,7 +62,7 @@ const MyGroups = () => {
       setNewGroup({ name: '', description: '' });
 
       // Refresh group list
-      const updated = await axios.get(`http://localhost:8080/api/groups/user/${user.id}`);
+      const updated = await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/groups/user/${user.id}`);
       setGroups(updated.data);
     } catch (err) {
       console.error(err);

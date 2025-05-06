@@ -42,7 +42,7 @@ const CompareStats = () => {
     setGroupStats([]);
     setPlayers([]);
     try {
-      const res = await axios.get(`http://localhost:8080/api/stats/group/${groupId}`);
+      const res = await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/stats/group/${groupId}`);
       setGroupStats(res.data);
 
       const uniquePlayers = [...new Set(res.data.map((s) => s.username))];

@@ -14,7 +14,7 @@ const Signup = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/auth/signup', form);
+      await axios.post('https://football-stats-backend-gyz8.onrender.com/api/auth/signup', form);
       navigate('/login');
     } catch (err) {
       setError('Failed to create account');

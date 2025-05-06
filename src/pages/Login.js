@@ -20,7 +20,7 @@ const Login = () => {
   
     try {
       const response = await axios.post(
-        'http://localhost:8080/api/auth/login',
+        'https://football-stats-backend-gyz8.onrender.com',
         qs.stringify(form),
         {
           withCredentials: true,
@@ -34,7 +34,7 @@ const Login = () => {
       login(userData);
   
       try {
-        await axios.get(`http://localhost:8080/api/profile/${userData.id}`);
+        await axios.get(`https://football-stats-backend-gyz8.onrender.com/api/profile/${userData.id}`);
         navigate('/dashboard');
       } catch (profileErr) {
         if (profileErr.response?.status === 404) {

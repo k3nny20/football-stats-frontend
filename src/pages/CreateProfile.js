@@ -22,7 +22,7 @@ const CreateProfile = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:8080/api/profile/create', {
+      await axios.post('https://football-stats-backend-gyz8.onrender.com/api/profile/create', {
         user_id: user.id, // assuming user.id is stored
         preferred_position: form.preferred_position,
         preferred_foot: form.preferred_foot
