@@ -20,7 +20,7 @@ const Login = () => {
   
     try {
       const response = await axios.post(
-        'https://football-stats-backend-gyz8.onrender.com',
+        'https://football-stats-backend-gyz8.onrender.com/api/auth/login',
         qs.stringify(form),
         {
           withCredentials: true,
